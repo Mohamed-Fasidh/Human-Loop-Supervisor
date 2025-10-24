@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./frontdesk.db
+      - SLA_MINUTES=15
+      - AGENT_MODE=simulator
+      - NOTIFY_WEBHOOK_URL=
+      - ADMIN_API_KEY=dev-secret
+    volumes:
+      - ./frontdesk.db:/app/frontdesk.db

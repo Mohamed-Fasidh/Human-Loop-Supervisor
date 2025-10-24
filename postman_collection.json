@@ -1,0 +1,97 @@
+{
+  "info": {
+    "name": "Frontdesk HITL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Simulate Known Call",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "dev-secret"
+          }
+        ],
+        "url": "http://localhost:8000/agent/simulate_call",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"caller_id\": \"+15551234567\",\n  \"question\": \"What are your hours?\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Simulate Unknown Call",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "dev-secret"
+          }
+        ],
+        "url": "http://localhost:8000/agent/simulate_call",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"caller_id\": \"+15550000000\",\n  \"question\": \"Do you offer bridal makeup at home?\"\n}"
+        }
+      }
+    },
+    {
+      "name": "List Pending",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "dev-secret"
+          }
+        ],
+        "url": "http://localhost:8000/help_requests/pending"
+      }
+    },
+    {
+      "name": "Reply (fill id)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "dev-secret"
+          }
+        ],
+        "url": "http://localhost:8000/help_requests/1/reply",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"answer_text\": \"Your answer here\"\n}"
+        }
+      }
+    },
+    {
+      "name": "List KB",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "dev-secret"
+          }
+        ],
+        "url": "http://localhost:8000/kb/"
+      }
+    }
+  ]
+}
