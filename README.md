@@ -1,6 +1,6 @@
 # Frontdesk — Human-in-the-Loop AI Supervisor
 
-## 🧠 Overview
+##  Overview
 
 This project implements **Phase-1** of Frontdesk’s *Human-in-the-Loop AI System* — an AI receptionist that can escalate unknown customer questions to a human supervisor, follow up with the customer, and learn automatically from new information.
 
@@ -12,20 +12,20 @@ When the AI doesn’t know something, it:
 
 ---
 
-## 🚀 Features
+##  Features
 
 | Module | Description |
 |---------|-------------|
-| 🤖 **AI Agent** | Simulated LiveKit agent (stub) that answers known questions or escalates when unsure. |
-| 🧍 **Supervisor Dashboard** | Simple HTML + JavaScript admin panel to view pending requests, reply, and review history. |
-| 💾 **Knowledge Base** | Stores learned Q/A pairs; auto-updates after supervisor replies. |
-| 🔁 **Lifecycle Management** | Request states: `PENDING → RESOLVED / UNRESOLVED` (auto timeout). |
-| ⚙️ **Background Watcher** | Auto-marks overdue requests as `UNRESOLVED` after SLA timeout. |
-| 🧩 **Extensible Design** | Ready for real LiveKit audio integration in Phase-2. |
+|  **AI Agent** | Simulated LiveKit agent (stub) that answers known questions or escalates when unsure. |
+|  **Supervisor Dashboard** | Simple HTML + JavaScript admin panel to view pending requests, reply, and review history. |
+|  **Knowledge Base** | Stores learned Q/A pairs; auto-updates after supervisor replies. |
+| **Lifecycle Management** | Request states: `PENDING → RESOLVED / UNRESOLVED` (auto timeout). |
+|  **Background Watcher** | Auto-marks overdue requests as `UNRESOLVED` after SLA timeout. |
+| **Extensible Design** | Ready for real LiveKit audio integration in Phase-2. |
 
 ---
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 | Layer | Tools |
 |--------|-------|
@@ -38,9 +38,9 @@ When the AI doesn’t know something, it:
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 1️⃣ Clone & Enter Folder
+###  Clone & Enter Folder
 ```bash
 git clone https://github.com/<your-username>/frontdesk-hitl.git
 cd frontdesk-hitl
